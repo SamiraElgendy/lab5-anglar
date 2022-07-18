@@ -1,0 +1,17 @@
+<div class="card ">
+    <img [src]="product.image" class="card-img-top" [alt]="product.title" />
+    <div class="card-body">
+      <a [routerLink]="['/product-details' , product.id]">
+        <h5 class="card-title">{{ product.title }}</h5>
+      </a>
+      <p class="card-text">
+        {{ product.category }}
+      </p>
+      <p [ngClass]="counter>0?'test1':'test2'">Counter:{{counter|count}}</p>
+      <button class="btn btn-primary" (click)="goToDetails(product.id)">
+        Go to product details
+      </button>
+      <button  class="btn btn-primary ms-2" (click)="addItemToCart()">Add to cart</button>
+    </div>
+  </div>
+  
